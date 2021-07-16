@@ -1,1 +1,0 @@
-I updated it and its at: https://github.com/ewartj/cs50final_improved_finance

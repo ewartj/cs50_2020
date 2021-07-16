@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <table class="table table-hover">
+            <tr>
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Amount</th>
+                <th>Latest price</th>
+                <th>Current Value</th>
+                <th>Price paid</th>
+                <th>Profit</th>
+            </tr>
+            {% for stock in portfolio %}
+            <tr>
+                <td>{{ stock.company }}</td>
+                <td>{{ stock.stock}}</td>
+                <td>{{ stock.number }}</td>
+                <td>{{ stock.cur_price }}</td>
+                <td>{{ stock.cur_total }}</td>
+                <td>{{ stock.total}}</td>
+                <td>{{ stock.profit }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <blockquote class="text-left">
+            <h5>Available cash: <mark>{{ cash }}</mark></h4>
+            <h5>Portfolio value: <mark>{{ grand_total }}</mark></h4>
+        </blockquote>
+    </div>
+    <div class="col-md-2"></div>
+{% endblock %}

@@ -1,0 +1,15 @@
+H1 { text-align: left;
+}
+
+body {
+border: 1px solid white;
+margin: auto;
+padding: 2px;
+text-align: left;
+background: grey !important;
+}
+
+img.resize {
+  width:200px;
+  height:40px;
+}
